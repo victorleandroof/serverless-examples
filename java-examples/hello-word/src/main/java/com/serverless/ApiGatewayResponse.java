@@ -37,7 +37,6 @@ public class ApiGatewayResponse {
 		return headers;
 	}
 
-	// API Gateway expects the property to be called "isBase64Encoded" => isIs
 	public boolean isIsBase64Encoded() {
 		return isBase64Encoded;
 	}
@@ -49,9 +48,7 @@ public class ApiGatewayResponse {
 	public static class Builder {
 
 		private static final Logger LOG = LogManager.getLogger(ApiGatewayResponse.Builder.class);
-
 		private static final ObjectMapper objectMapper = new ObjectMapper();
-
 		private int statusCode = 200;
 		private Map<String, String> headers = Collections.emptyMap();
 		private String rawBody;
